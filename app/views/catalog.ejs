@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+
+<main class="content">
+  
+    <section class="banner">
+        <img class="banner__image" src="/image/categories_img.webp" alt="" loading="lazy"  media="all">
+        <div class="banner__content">
+          <h1 class="banner__title">Notre catalogue</h1>
+        </div>
+    </section>
+
+    <section class="flavor section">
+      <form class="flavor__form" action="" method="get">
+
+        <label for="flavor" aria-label="Sélectionner votre saveur"></label>
+        <select class="flavor__form-select" type="text" id="flavor" name="flavor">
+          <option class="flavor__form-input" value="" disabled selected>Catégorie</option>
+          <% flavors.forEach(flavor => { %>
+            <option class="flavor__form-input" value="<%= flavor.name %>"><%= flavor.name %></option>
+          <% }) %>
+        </select>
+      </form>
+    </section>
+
+    <section class="products section">
+      <h2 class="products__main-title">Les Dernières Nouveautés</h2>
+  
+      <div class="products__container">
+        <% locals.products.forEach(product => { %>
+        <article class="products__card">
+          <img
+          src="/image/coffees/<%= product.reference %>.webp"
+          alt=""
+          class="products__card__image"/>
+          <h3 class="products__title"><%= product.name %></h3>
+          <p class="products__text"><%= product.description %></p>
+          <div class="products__link">
+            <a href="/product/<%= product.id %>" class="products__button button">découvrir</a>
+          </div>
+        </article>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="button-categories section">
+      <a href="/catalog/allFlavor" id="buttonAllFlavor" class="button-categories-button button">voir toutes les catégories</a>
+    </section>
+
+  </main>
+
+<%- include('partials/footer') %>

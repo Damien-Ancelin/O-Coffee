@@ -1,0 +1,38 @@
+{
+  "name": "projet-ocoffee-damien-ancelin",
+  "version": "1.0.0",
+  "description": "## Mise en ligne d'un site vitrine dynamique avec BDD",
+  "main": "app.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "node --watch app.js",
+    "online": "node app.js",
+    "db:create": "psql -U ocoffee -d ocoffee -f ./data/create_db.sql",
+    "db:seed": "psql -U ocoffee -d ocoffee -f ./data/populate.sql",
+    "db:reset": "npm run db:create && npm run db:seed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/nodejs": "^5.0.2",
+    "argon2": "^0.41.1",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "email-validator": "^2.0.4",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1",
+    "password-validator": "^5.3.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@stylistic/eslint-plugin-js": "^2.11.0",
+    "eslint": "^9.15.0",
+    "globals": "^15.12.0"
+  }
+}

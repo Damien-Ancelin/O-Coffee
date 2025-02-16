@@ -1,0 +1,5 @@
+ORIGIN: name
+COME, 11 COFFEE, 0N ORIGIN
+COFFEE: name, reference, description, price, available
+TASTE, 11 COFFEE, 0N FLAVOR
+FLAVOR : name

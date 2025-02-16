@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+
+<main class="content">
+  <section class="banner">
+    <img class="banner__image banner__image--heightUp" src="/image/presentation_img.webp" alt="" loading="lazy" media="all"/>
+    <div class="banner__content">
+      <h2 class="banner__title">Qui sommes nous ?</h2>
+      <p class="banner__text">
+        Jean et Jacques Pepper, deux frères passionnés par le
+        <strong>café</strong>, sont les fondateurs de notre boutique. Avec une
+        expertise approfondie et un amour profond pour cette délicieuse boisson,
+        ils ont créé un espace où le café est célébré comme une expérience
+        raffinée et inspirante.
+      </p>
+      <div class="banner__button">
+        <a href="/catalog" class="banner__link-button button">Catalogue</a>
+        <a href="/aboutUs" class="banner__link-button button">En savoir plus</a>
+      </div>
+    </div>
+  </section>
+
+  <% if (locals.alert) { %>
+    <div class="section alert">
+      <div class=" alert-sucess">
+        <p><%- locals.alert %></p>
+      </div>
+    </div>
+  <% } %>
+
+  <section class="products section">
+    <h2 class="products__main-title">Les Dernières Nouveautés</h2>
+
+    <div class="products__container">
+      <% products.forEach(product => { %>
+      <article class="products__card">
+        <img
+        src="/image/coffees/<%= product.reference %>.webp"
+        alt=""
+        class="products__card__image"/>
+        <h3 class="products__title"><%= product.name %></h3>
+        <p class="products__text"><%= product.description %></p>
+        <div class="products__link">
+          <a href="/product/<%= product.id %>" class="products__button button">découvrir</a>
+        </div>
+      </article>
+      <% }) %>
+    </div>
+  </section>
+  
+</main>
+
+<%- include('partials/footer') %>

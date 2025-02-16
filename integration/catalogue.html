@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Slabo+13px&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Notre catalogue | O'Coffee</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <a href="./index.html"><img class="logo" src="./image/logo.svg" alt="logo de l'enseigne" /></a>
+          <p class="header__main-title">o'coffee</p>
+        </div>
+        <nav class="header__nav">
+          <a class="header__nav-item" href="./index.html"
+            >Accueil</a
+          >
+          <a class="header__nav-item header__nav-item--active" href="#">Notre catalogue</a>
+          <a class="header__nav-item" href="#">Boutique</a>
+        </nav>
+      </header>
+
+      <main class="content">
+        <section class="banner">
+          <div class="banner__container">
+            <h1 class="banner__title">Notre catalogue</h1>
+          </div>
+        </section>
+
+        <section class="categories">
+          <form class="select-form" action="#" method="get">
+            <select class="select-form__input" type="text" id="flavor" name="flavor">
+              <option class="select-form__input" value="" disabled selected>Catégorie</option>
+              <option class="select-form__input" value="corsé">Corsé</option>
+              <option class="select-form__input" value="acide">Acide</option>
+              <option class="select-form__input" value="fruité">Fruité</option>
+              <option class="select-form__input" value="doux">Doux</option>
+              <option class="select-form__input" value="other">Other</option>
+            </select>
+          </form>
+        </section>
+
+        <section class="products">
+          <h2 class="products__main-title">Les Dernières Nouveautés</h2>
+          <div class="products__container">
+            <article class="products__card">
+              <img
+                src="./image/coffees/100955890.webp"
+                alt=""
+                class="products__card__image"
+              />
+              <h2 class="products__title">Espresso</h2>
+              <p class="products__text">
+                Café fort et concentré préparé en faisant passer de l'eau chaude
+                à travers du café finement moulu.
+              </p>
+              <div class="products__link">
+                <a href="./product.html" class="products__discover-button button">découvrir</a>
+              </div>
+            </article>
+            <article class="products__card">
+              <img
+                src="./image/coffees/105589090.webp"
+                alt=""
+                class="products__card__image"
+              />
+              <h2 class="products__title">Ethiopian Yirgacheffe</h2>
+              <p class="products__text">
+                Réputé pour son arôme floral, son acidité vive et ses notes de
+                saveur citronnée.
+              </p>
+              <div class="products__link">
+                <a href="./product.html" class="products__discover-button button">découvrir</a>
+              </div>
+            </article>
+            <article class="products__card">
+              <img
+                src="./image/coffees/100955894.webp"
+                alt=""
+                class="products__card__image"
+              />
+              <h2 class="products__title">Columbian</h2>
+              <p class="products__text">
+                Café moyennement corsé avec une acidité vive et une saveur
+                riche.
+              </p>
+              <div class="products__link">
+                <a href="./product.html" class="products__discover-button button">découvrir</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="button-categories">
+          <a href="#" class="button-categories-button button">voir toutes les catégories</a>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <div class="footer__link">
+          <a class="footer__link__item" href="#"
+            ><img class="logo" src="./image/logo.svg" alt="logo de O'coffee"
+          /></a>
+          <a class="footer__link__item" href="#">Accueil</a>
+          <a class="footer__link__item" href="#">Notre catalogue</a>
+          <a class="footer__link__item" href="#">Boutique</a>
+        </div>
+
+        <div class="footer__social-media">
+          <a class="footer__social-media__link" href=""
+            ><img
+              src="./image/icons/fb.webp"
+              alt="logo Facebook"
+              aria-label="lien cliquable vers la page facebook de O'coffee"
+          /></a>
+          <a class="footer__social-media__link" href=""
+            ><img
+              src="./image/icons/insta.webp"
+              alt="logo Instagram"
+              aria-label="lien cliquable vers la page instagram de O'coffee"
+          /></a>
+          <a class="footer__social-media__link" href=""
+            ><img
+              src="./image/icons/yt.webp"
+              alt="logo Youtube"
+              aria-label="lien cliquable vers la page youtube de O'coffee"
+          /></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

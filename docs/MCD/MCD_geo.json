@@ -1,0 +1,25 @@
+{
+  "width": 448,
+  "height": 136,
+  "cx": [
+    [ "ORIGIN", 38 ],
+    [ "COME", 125 ],
+    [ "COFFEE", 222 ],
+    [ "TASTE", 320 ],
+    [ "FLAVOR", 409 ]
+  ],
+  "cy": [
+    [ "ORIGIN", 68 ],
+    [ "COME", 68 ],
+    [ "COFFEE", 68 ],
+    [ "TASTE", 68 ],
+    [ "FLAVOR", 68 ]
+  ],
+  "shift": [
+    [ "COME,COFFEE,0", 0 ],
+    [ "COME,ORIGIN,0", 0 ],
+    [ "TASTE,COFFEE,0", 0 ],
+    [ "TASTE,FLAVOR,0", 0 ]
+  ],
+  "ratio": []
+}

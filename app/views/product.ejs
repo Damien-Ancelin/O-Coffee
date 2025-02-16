@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+<main class="content">
+  <section class="product__container section">
+
+    <article class="product__card">
+      <img
+        src="/image/coffees/<%= product.reference %>.webp"
+        alt=""
+        class="product__card__image"
+      />
+      <div class="product__card__text-container">
+        <h2 class="product__card__title"><%= product.name %></h2>
+        <h3 class="caracteristic__title">Caractéristiques principal :</h3>
+        <p class="caracteristic__text"><%= product.flavor %></p>
+        <h3 class="origin__title">Origine :</h3>
+        <p class="origin__text"><%= product.origin %></p>
+        
+        <p class="product__card__description"><%= product.description %></p>
+
+        <div class="available">
+          <% if(product.available) { %>
+            <h3 class="available__title">Produit Disponible</h3>
+          <% }else{ %>
+            <h3 class="available__title unavailable">Produit Indisponible</h3>
+          <% } %>
+        </div>
+        <div class="product__card__link">
+          <a href="/catalog" class="product__card-button button">Catalogue</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Slabo+13px&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Espresso | O'Coffee</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <a href="./index.html"
+            ><img class="logo" src="./image/logo.svg" alt="logo de l'enseigne"
+          /></a>
+          <p class="header__main-title">o'coffee</p>
+        </div>
+        <nav class="header__nav">
+          <a class="header__nav-item header__nav-item--active" href="#"
+            >Accueil</a
+          >
+          <a class="header__nav-item" href="./catalogue.html"
+            >Notre catalogue</a
+          >
+          <a class="header__nav-item" href="#">Boutique</a>
+        </nav>
+      </header>
+
+      <main class="content">
+        <section class="product__container">
+          <article class="product__card">
+            <img
+              src="./image/coffees/100955890.webp"
+              alt="grains de café"
+              class="product__card__image"
+            />
+            <div class="product__card__text-container">
+                <h2 class="product__card__title">Espresso</h2>
+                <div class="caracteristic">
+                  <h3 class="caracteristic__title">Caractéristique principal :</h3>
+                  <p class="caracteristic__text">Corsé</p>
+                </div>
+                <dic class="origin">
+                  <h3 class="origin__title">Origine :</h3>
+                  <p class="origin__text">Italie</p>
+                </dic>
+                <p class="product__card__description">
+                  Café fort et concentré préparé en faisant passer de l'eau chaude à
+                  travers du café finement moulu.
+                </p>
+                <div class="product__card__link">
+                  <a href="./catalogue.html" class="product__card-button button"
+                    >Catalogue</a
+                  >
+                </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__link">
+          <a class="footer__link__item" href="#"
+            ><img class="logo" src="./image/logo.svg" alt="logo de O'coffee"
+          /></a>
+          <a class="footer__link__item" href="#">Accueil</a>
+          <a class="footer__link__item" href="./catalogue.html"
+            >Notre catalogue</a
+          >
+          <a class="footer__link__item" href="#">Boutique</a>
+        </div>
+
+        <div class="footer__social-media">
+          <a class="footer__social-media__link" href=""
+            ><img
+              src="./image/icons/fb.webp"
+              alt="logo Facebook"
+              aria-label="lien cliquable vers la page facebook de O'coffee"
+          /></a>
+          <a class="footer__social-media__link" href=""
+            ><img
+              src="./image/icons/insta.webp"
+              alt="logo Instagram"
+              aria-label="lien cliquable vers la page instagram de O'coffee"
+          /></a>
+          <a class="footer__social-media__link" href=""
+            ><img
+              src="./image/icons/yt.webp"
+              alt="logo Youtube"
+              aria-label="lien cliquable vers la page youtube de O'coffee"
+          /></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

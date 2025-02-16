@@ -1,0 +1,49 @@
+<%- include('./partials/header') %>
+
+<main class="content">
+
+  <section class="banner">
+    <img class="banner__image" src="/image/inscription_img.webp" alt="" loading="lazy"  media="all">
+    <div class="banner__content">
+      <h1 class="banner__title">S'inscrire</h1>
+    </div>
+  </section>
+
+  <% if (locals.error) { %>
+    <div class="section alert">
+      <div class=" alert-error">
+        <p><%- locals.error %></p>
+      </div>
+    </div>
+  <% } %>
+
+  <section class="register section">
+    <form class="form" action="" method="POST">
+      <label class="form__label" for="email">Email</label>
+      <input class="form__input" type="email" name="email" placeholder="jean@ocoffee@gmail.com">
+
+      <label class="form__label" for="lastname">Nom</label>
+      <input class="form__input" type="text" name="lastname" placeholder="Votre nom">
+
+      <label class="form__label" for="firstname">Prénom</label>
+      <input class="form__input" type="text" name="firstname" placeholder="Votre Prénom">
+
+      <label class="form__label" for="password">Mot de passe</label>
+      <input class="form__input" type="password" name="password" placeholder="********">
+
+      <label class="form__label" for="confirmation">Confirmation mot de passe</label>
+      <input class="form__input" type="password" name="confirmation" placeholder="********">
+      
+      <button class="button login__button">S'inscrire</button>
+    </form>
+  </section>
+
+  <section class="section alreadyRegister">
+    <h2>Vous-avez déjà un compte ?</h2>
+    <a class="button" href="/login">Se connecter</a>
+  </section>
+
+</main>
+
+
+<%- include('./partials/footer') %>

@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+
+<main class="content">
+  <section class="banner">
+    <img class="banner__image" src="/image/connexion.webp" alt="" loading="lazy"  media="all">
+    <div class="banner__content">
+      <h1 class="banner__title">Connexion</h1>
+    </div>
+</section>
+
+<% if (locals.error) { %>
+  <div class="section alert">
+    <div class=" alert-error">
+      <p><%= locals.error %></p>
+    </div>
+  </div>
+<% } %>
+
+<section class="login section">
+    <form class="form" action="" method="post">
+      <label class="form__label" for="email">Email</label>
+      <input class="form__input" type="email" name="email" id="email" placeholder="jean@ocoffee@gmail.com">
+
+      <label class="form__label" for="password">Mot de passe</label>
+      <input class="form__input" type="password" name="password" id="password" placeholder="**********">
+
+      <button class="button login__button">Connexion</button>
+    </form>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

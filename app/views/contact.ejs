@@ -1,0 +1,41 @@
+<%- include('partials/header') %>
+
+<main class="content">
+  
+  <section class="banner">
+    <img class="banner__image" src="/image/contact_img.webp" alt="" loading="lazy"  media="all">
+    <div class="banner__content">
+      <h1 class="banner__title">Contact</h1>
+    </div>
+</section>
+
+  <section class="contact__container section">
+
+    <article class="contact__card">
+
+      <div id="map"></div>
+
+      <div class="contact__action">
+        
+        <form class="form" id="contactForm" action="" method="post">
+            <label class="form__label" for="name">Nom</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Jean"/>
+
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="jean@ocoffee@gmail.com"/>
+
+            <label class="form__label" for="subject">Sujet</label>
+            <input class="form__input" type="text" id="subject" name="subject" placeholder="Prochain arrivage"/>
+
+            <label class="form__label" for="message">Message</label>
+            <textarea class="form__input form__input--textarea" id="message" name="message" rows="5" placeholder="Bonjour, je vous écrit pour..."></textarea>
+            
+            <button class="contact__form__button button">Envoyer</button>
+        </form>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<%- include('partials/footer') %>
