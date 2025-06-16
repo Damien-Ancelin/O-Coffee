@@ -35,5 +35,18 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  ocoffee_test:
+    container_name: ocoffee_test
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    command: ["npm", "run", "test"]
+    depends_on:
+      ocoffee_test-app:
+        condition: service_started
+      ocoffee_test-db:
+        condition: service_healthy
+
 volumes:
   ocoffee_test_data:
