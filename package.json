@@ -12,7 +12,9 @@
     "online": "node app.js",
     "db:create": "psql -U ocoffee -d ocoffee -f ./data/create_db.sql",
     "db:seed": "psql -U ocoffee -d ocoffee -f ./data/populate.sql",
-    "db:reset": "npm run db:create && npm run db:seed"
+    "db:reset": "npm run db:create && npm run db:seed",
+    "docker:test": "docker compose --env-file .env.test -f docker-compose.yml up -d --build",
+    "docker:stop": "docker compose --env-file .env.test -f docker-compose.yml down -v --remove-orphans"
   },
   "keywords": [],
   "author": "",
