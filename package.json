@@ -14,7 +14,8 @@
     "db:seed": "psql -U ocoffee -d ocoffee -f ./data/populate.sql",
     "db:reset": "npm run db:create && npm run db:seed",
     "docker:test": "docker compose --env-file .env.test -f docker-compose.yml up -d --build",
-    "docker:stop": "docker compose --env-file .env.test -f docker-compose.yml down -v --remove-orphans"
+    "docker:stop": "docker compose --env-file .env.test -f docker-compose.yml down -v --remove-orphans",
+    "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --forceExit --setupFilesAfterEnv=./app/config/jest-setup.js"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +36,7 @@
     "@eslint/js": "^9.15.0",
     "@stylistic/eslint-plugin-js": "^2.11.0",
     "eslint": "^9.15.0",
-    "globals": "^15.12.0"
+    "globals": "^15.12.0",
+    "jest": "^30.0.0"
   }
 }

@@ -1,0 +1,56 @@
+services:
+  ocoffee_test-app:
+    container_name: ocoffee_test-app
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    environment:
+      - NODE_ENV=test
+    env_file:
+      - ./.env.test
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      ocoffee_test-db:
+        condition: service_healthy
+      ocoffee_test:
+        condition: service_started
+
+  ocoffee_test-db:
+    container_name: ocoffee_test-db
+    image: postgres:latest
+    env_file:
+      - ./.env.test
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d
+      - ocoffee_test_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD', 'pg_isready', '-U', '${DB_USER}', '-d', '${DB_NAME}']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ocoffee_test:
+    container_name: ocoffee_test
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    environment:
+      - NODE_ENV=test
+    env_file:
+      - ./.env.test
+    command: ["npm", "run", "test"]
+    depends_on:
+      ocoffee_test-db:
+        condition: service_healthy
+
+volumes:
+  ocoffee_test_data:
